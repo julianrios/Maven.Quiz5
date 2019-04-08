@@ -4,15 +4,23 @@ package rocks.zipcode.io.quiz4.generics;
  * @author leon on 18/12/2018.
  */
 public class SortedGroup<_> extends Group<_> {
+
     @Override
     public void insert(_ value) {
+        super.insert(value);
     }
 
     @Override
     public void delete(_ value) {
+        super.delete(value);
     }
 
     public Integer indexOf(_ value) {
-        return null;
+        return indexOfElement(value);
+    }
+
+    @Override
+    public Integer indexOfElement(_ value) {
+        return super.indexOfElement(value);
     }
 }

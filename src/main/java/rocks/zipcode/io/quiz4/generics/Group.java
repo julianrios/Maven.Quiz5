@@ -42,6 +42,10 @@ public class Group<_> implements Iterable<_>, GroupInterface<_> {
         return this.list.iterator();
     }
 
+    public Integer indexOfElement(_ value) {
+        return this.list.indexOf(value);
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(list.toArray());
