@@ -15,12 +15,12 @@ public class SortedGroup<_> extends Group<_> {
         super.delete(value);
     }
 
-    public Integer indexOf(_ value) {
-        return indexOfElement(value);
-    }
+//    public Integer indexOf(_ value) {
+//        return indexOfElement(value);
+//    }
 
     @Override
-    public Integer indexOfElement(_ value) {
-        return super.indexOfElement(value);
+    public Integer indexOf(_ value) {
+        return super.indexOf(value);
     }
 }

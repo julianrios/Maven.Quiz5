@@ -1,53 +1,51 @@
 package rocks.zipcode.io.quiz4.generics;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author leon on 18/12/2018.
  */
 public class Group<_> implements Iterable<_>, GroupInterface<_> {
-    private List<_> list;
+    private Set<_> set;
     public Group() {
-        this.list = new ArrayList<>();
+        this.set = new TreeSet<>();
     }
 
     public Integer count() {
-        return this.list.size();
+        return this.set.size();
     }
 
     public void insert(_ value) {
-        this.list.add(value);
+        this.set.add(value);
     }
 
     public Boolean has(_ value) {
-        return this.list.contains(value);
+        return this.set.contains(value);
     }
 
     public _ fetch(int indexOfValue) {
-        return this.list.get(indexOfValue);
+        return new ArrayList<>(set).get(indexOfValue);
     }
 
     public void delete(_ value) {
-        this.list.remove(value);
+        this.set.remove(value);
     }
 
     public void clear() {
-        this.list.clear();
+        this.set.clear();
     }
 
     public Iterator<_> iterator() {
-        return this.list.iterator();
+        return this.set.iterator();
     }
 
-    public Integer indexOfElement(_ value) {
-        return this.list.indexOf(value);
+    public Integer indexOf(_ value) {
+        return new ArrayList<>(set).indexOf(value);
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(list.toArray());
+        return Arrays.toString(set.toArray());
     }
+
 }
