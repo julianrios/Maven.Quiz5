@@ -7,6 +7,7 @@ import java.util.*;
  */
 public class Group<_> implements Iterable<_>, GroupInterface<_> {
     private Set<_> set;
+
     public Group() {
         this.set = new TreeSet<>();
     }

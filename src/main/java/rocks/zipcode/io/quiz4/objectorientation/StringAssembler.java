@@ -8,21 +8,21 @@ import java.util.List;
  */
 public class StringAssembler {
     private Character delimiter;
-    private String str;
+    private StringBuilder sb;
 
     public StringAssembler(Character delimiter) {
         this.delimiter = delimiter;
+        this.sb = new StringBuilder();
     }
 
     public StringAssembler append(String str) {
-        StringAssembler stringAssembler = new StringAssembler(delimiter);
-
-        return stringAssembler;
+        sb.append(str);
+        sb.append(delimiter);
+        return this;
     }
 
     public String assemble() {
-        System.out.println(delimiter);
-        System.out.println(str);
-        return String.join(delimiter + "", str);
+        sb.deleteCharAt(sb.length()-1);
+        return sb.toString();
     }
 }
