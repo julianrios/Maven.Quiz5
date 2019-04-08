@@ -1,37 +1,49 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<_> {
+public class Group<_> implements Iterable<_>, GroupInterface<_> {
+    private List<_> list;
     public Group() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+        this.list = new ArrayList<>();
     }
 
     public Integer count() {
-        return null;
+        return this.list.size();
     }
 
     public void insert(_ value) {
+        this.list.add(value);
     }
 
     public Boolean has(_ value) {
-        return null;
+        return this.list.contains(value);
     }
 
     public _ fetch(int indexOfValue) {
-        return null;
+        return this.list.get(indexOfValue);
     }
 
     public void delete(_ value) {
+        this.list.remove(value);
     }
 
     public void clear() {
+        this.list.clear();
     }
 
     public Iterator<_> iterator() {
-        return null;
+        return this.list.iterator();
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(list.toArray());
     }
 }

@@ -8,7 +8,7 @@ import java.util.Stack;
  */
 public class MyStack<SomeType> implements Iterable<SomeType> {
     private Stack<SomeType> stack;
-    
+
     public MyStack() {
         stack = new Stack<>();
     }
