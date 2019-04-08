@@ -15,6 +15,7 @@ public class LearnTest {
 
         // when
         student.learn(expected);
+        System.out.println(student);
         Double actual = student.getTotalStudyTime();
 
         // then
