@@ -10,6 +10,7 @@ import java.util.TreeSet;
 public class GenericUtils {
     public static <_ extends Comparable> Iterable<? extends Iterable<_>> powerSet(Set<_> originalSet) {
         Double powerSetSize = Math.pow(2, originalSet.size());
+
         return null;
     }
 

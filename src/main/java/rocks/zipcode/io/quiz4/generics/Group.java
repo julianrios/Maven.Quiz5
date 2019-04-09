@@ -6,47 +6,47 @@ import java.util.*;
  * @author leon on 18/12/2018.
  */
 public class Group<_> implements Iterable<_>, GroupInterface<_> {
-    private Set<_> set;
+    private List<_> list;
 
     public Group() {
-        this.set = new TreeSet<>();
+        this.list = new ArrayList<>();
     }
 
     public Integer count() {
-        return this.set.size();
+        return this.list.size();
     }
 
     public void insert(_ value) {
-        this.set.add(value);
+        this.list.add(value);
     }
 
     public Boolean has(_ value) {
-        return this.set.contains(value);
+        return this.list.contains(value);
     }
 
     public _ fetch(int indexOfValue) {
-        return new ArrayList<>(set).get(indexOfValue);
+        return this.list.get(indexOfValue);
     }
 
     public void delete(_ value) {
-        this.set.remove(value);
+        this.list.remove(value);
     }
 
     public void clear() {
-        this.set.clear();
+        this.list.clear();
     }
 
     public Iterator<_> iterator() {
-        return this.set.iterator();
+        return this.list.iterator();
     }
 
     public Integer indexOf(_ value) {
-        return new ArrayList<>(set).indexOf(value);
+        return list.indexOf(value);
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(set.toArray());
+        return Arrays.toString(list.toArray());
     }
 
 }

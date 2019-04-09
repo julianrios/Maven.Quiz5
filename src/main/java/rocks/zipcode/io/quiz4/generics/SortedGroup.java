@@ -1,26 +1,31 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 /**
  * @author leon on 18/12/2018.
  */
 public class SortedGroup<_> extends Group<_> {
 
-    @Override
+    private SortedSet<_> set;
+
+    public SortedGroup() {
+        this.set = new TreeSet<>();
+    }
+
     public void insert(_ value) {
-        super.insert(value);
+        this.set.add(value);
     }
 
-    @Override
+
     public void delete(_ value) {
-        super.delete(value);
+        this.set.remove(value);
     }
 
-//    public Integer indexOf(_ value) {
-//        return indexOfElement(value);
-//    }
-
-    @Override
     public Integer indexOf(_ value) {
-        return super.indexOf(value);
+        return new ArrayList<>(set).indexOf(value);
     }
 }
