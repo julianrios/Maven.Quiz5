@@ -1,12 +1,9 @@
 package rocks.zipcode.io.quiz4.generics;
 
-import rocks.zipcode.io.quiz4.objectorientation.StringAssembler;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Stream;
 
 /**
  * @author leon on 11/12/2018.
@@ -25,6 +22,10 @@ public class ComparableTreeSet<_> implements Comparable<_> {
     }
 
     public int compareTo(ComparableTreeSet<_> o) {
+        for(_ element : o.getSet()) {
+
+//            Integer.valueOf((Integer) element).compareTo();
+        }
         return Integer.valueOf(null);
     }
 
